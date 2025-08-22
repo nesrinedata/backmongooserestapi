@@ -33,7 +33,7 @@ productRouter.get("/",async(req,res)=>{
 productRouter.get("/:id",async(req,res)=>{
     try {
       
-       let result = await User.findById(req.params.id);
+       let result = await Product.findById(req.params.id);
        res.send({msg:"one product",product:result});
     } catch (error) {
         console.log(error)
